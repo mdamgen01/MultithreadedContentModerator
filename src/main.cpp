@@ -14,7 +14,7 @@ int main() {
     content_moderator::Tokenizer tokenizer;
 
     std::unordered_set<std::string> nasty = {"Nancyboy","Butthead"};
-    std::unordered_set<std::string> lines = tokenizer.tokenizeFile("/Users/matthewdamgen/Personal Projects/txt_file/bad_words.txt");
+    std::unordered_set<std::string> lines = tokenizer.tokenizeFile("/home/nikkola/MultithreadedContentModerator/txt_file");
 
     tokenizer.findBadWords(nasty, lines);
     return 0;

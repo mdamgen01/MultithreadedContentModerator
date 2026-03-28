@@ -5,10 +5,17 @@
  * and severity scoring to flag high-risk content efficiently.
  */
 
-#include <iostream>
+#include <string>
+#include <unordered_set>
+#include "Tokenizer.h"
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    content_moderator::Tokenizer tokenizer;
+
+    std::unordered_set<std::string> nasty = {"Nancyboy","Butthead"};
+    std::unordered_set<std::string> lines = tokenizer.tokenizeFile("/Users/matthewdamgen/Personal Projects/txt_file/bad_words.txt");
+
+    tokenizer.findBadWords(nasty, lines);
     return 0;
 }

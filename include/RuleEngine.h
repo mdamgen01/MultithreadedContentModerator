@@ -6,21 +6,23 @@
 #define CONTENT_MODERATOR_RULEENGINE_H
 
 #pragma once
-#include <unordered_set>
-#include <string>
+#include "Rule.h"
+#include <memory>
 #include <vector>
 
 namespace content_moderator {
 
-    struct Finding {
-        std::string message;
-        std::string ruleName;
-    };
-
     class RuleEngine {
-        public:
+    private:
+        std::vector<std::unique_ptr<Rule>> rules;
 
+    public:
+        void addRule(std::unique_ptr<Rule> rule);
+
+        std::vector<Finding> run(
+            const std::unordered_set<std::string>& tokens);
     };
-} // content_moderator
+
+}
 
 #endif //CONTENT_MODERATOR_RULEENGINE_H

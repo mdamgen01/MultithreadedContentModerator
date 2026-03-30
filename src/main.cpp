@@ -5,17 +5,9 @@
  * and severity scoring to flag high-risk content efficiently.
  */
 
-#include <string>
-#include <unordered_set>
-#include "Tokenizer.h"
-
+#include "Scanner.h"
 
 int main() {
-    content_moderator::Tokenizer tokenizer;
-
-    std::unordered_set<std::string> nasty = {"Nancyboy","Butthead"};
-    std::unordered_set<std::string> lines = tokenizer.tokenizeFile("/home/nikkola/MultithreadedContentModerator/txt_file");
-
-    tokenizer.findBadWords(nasty, lines);
-    return 0;
+    content_moderator::Scanner scanner;
+    scanner.scanFile("txt_file");
 }

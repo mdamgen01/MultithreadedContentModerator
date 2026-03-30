@@ -15,4 +15,6 @@ add_executable(content_moderator
         src/ThreadPool.cpp
         src/Tokenizer.cpp
         src/ResultCollector.cpp
+        include/Rule.h
+        include/OffensiveWordRule.h
 )

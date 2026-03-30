@@ -59,14 +59,13 @@ This design follows the **Open/Closed Principle**:
 
 Adding a new rule requires only one line:
 
-```cpp
 engine.addRule(std::make_unique<OffensiveWordRule>());
 
 ## Installation
 
 Make sure you have **CMake** and a **C++20 compiler** installed.
 
-```bash
+
 # Clone the repository
 git clone https://github.com/username/content_moderator.git
 cd content_moderator
@@ -80,7 +79,7 @@ cmake ..
 # Build the project
 cmake --build .
 
-Project Goals
+## Project Goals
 
 This project is a learning exercise focused on:
 - Modern C++ architecture and project structure
@@ -88,7 +87,7 @@ This project is a learning exercise focused on:
 - Separation of concerns
 - Preparing for multithreaded processing
 
-Future Improvements
+## Future Improvements
 
 - Load offensive word lists from external files
 - Add regex-based detection (PII, URLs, credit cards)
@@ -96,7 +95,7 @@ Future Improvements
 - Full multithreaded scanning pipeline
 - Severity scoring and structured result reporting
 
-Author
+## Author
 
 Created by Matthew Damgen as a portfolio project
 while returning to modern C++ and software architecture.

@@ -65,18 +65,17 @@ engine.addRule(std::make_unique<OffensiveWordRule>());
 
 Make sure you have **CMake** and a **C++20 compiler** installed.
 
+Clone the repository
+- git clone https://github.com/username/content_moderator.git
+- cd content_moderator
 
-# Clone the repository
-git clone https://github.com/username/content_moderator.git
-cd content_moderator
+Create a build directory
+- mkdir build && cd build
 
-# Create a build directory
-mkdir build && cd build
+Generate build files
+- cmake ..
 
-# Generate build files
-cmake ..
-
-# Build the project
+## Build the project
 cmake --build .
 
 ## Project Goals

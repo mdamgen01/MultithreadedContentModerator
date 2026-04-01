@@ -4,8 +4,6 @@
 
 #include "RuleEngine.h"
 
-#include "RuleEngine.h"
-
 namespace content_moderator {
 
     void RuleEngine::addRule(std::unique_ptr<Rule> rule) {
